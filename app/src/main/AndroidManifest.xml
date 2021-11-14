@@ -3,6 +3,7 @@
     package="com.example.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -41,6 +42,9 @@
         <activity
             android:name="com.example.MainActivity"
             android:exported="true"></activity>
+	<activity android:name="com.example.GetAll" />
+        <activity android:name="com.example.Upload" />
+        <activity android:name="com.example.GetByName" />
 
         <meta-data
             android:name="preloaded_fonts"
