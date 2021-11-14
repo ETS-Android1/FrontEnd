@@ -10,7 +10,6 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -44,12 +43,8 @@ public class MainActivity extends AppCompatActivity {
     Bundle extras ;
     UserAPI userAPI;
     public  void GoToEditProfile(View view){
-        SharedPreferences sideBarSharedPreferences = getSharedPreferences("sideBarSharedPreferences",MODE_PRIVATE);
-        SharedPreferences.Editor myEdit = sideBarSharedPreferences.edit();
-        myEdit.putString("token", extras.getString("token"));
-        myEdit.commit();
-        Intent editProfile = new Intent(MainActivity.this, EditProfile.class);
-        startActivity(editProfile);
+        Intent logOut = new Intent(MainActivity.this, EditProfile.class);
+        startActivity(logOut);
     }
     public void LogoutClicked(MenuItem button){
         showWarningDialog();
