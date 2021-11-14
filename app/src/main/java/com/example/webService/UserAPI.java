@@ -28,7 +28,4 @@ public interface UserAPI {
 
     @POST("logout/")
     Call<UserSession> logOut(@Header("Authorization") String user_token);
-
-    @POST("user/")
-    Call<User> showProfile(@Header("Authorization") String user_token);
 }
