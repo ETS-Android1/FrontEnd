@@ -13,6 +13,9 @@ public class UserSession {
         this.user = user;
         this.token = token;
     }
+    public UserSession(User user) {
+        this.user = user;
+    }
 
     public UserSession(String token, String username, String expiry) {
         this.token = token;

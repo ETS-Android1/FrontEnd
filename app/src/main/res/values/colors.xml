@@ -19,13 +19,14 @@
     <color name="ColorNeutral">#434343</color>
     <color name="ColorWarning">#FFCC00</color>
     <color name="colorPrimary">#3F51B5</color>
+
     <color name="colorPrimaryDark">#292b3d</color>
+
     <color name="gray_light">#fafafa</color>
+
     <color name="start_blue">#09c6df</color>
+
     <color name="end_blue">#0bcc6e</color>
+
     <color name="colorAccent">#FF4081</color>
-    <color name="bg_black1">#303030</color>
-    <color name="bg_black2">#1c1c1c</color>
-    <color name="element_black">#494949</color>
-    <color name="element_white">#d3d8e3</color>
 </resources>

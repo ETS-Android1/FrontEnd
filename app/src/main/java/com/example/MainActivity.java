@@ -10,6 +10,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -43,8 +44,12 @@ public class MainActivity extends AppCompatActivity {
     Bundle extras ;
     UserAPI userAPI;
     public  void GoToEditProfile(View view){
-        Intent logOut = new Intent(MainActivity.this, EditProfile.class);
-        startActivity(logOut);
+        SharedPreferences sideBarSharedPreferences = getSharedPreferences("sideBarSharedPreferences",MODE_PRIVATE);
+        SharedPreferences.Editor myEdit = sideBarSharedPreferences.edit();
+        myEdit.putString("token", extras.getString("token"));
+        myEdit.commit();
+        Intent editProfile = new Intent(MainActivity.this, EditProfile.class);
+        startActivity(editProfile);
     }
     public void LogoutClicked(MenuItem button){
         showWarningDialog();
@@ -129,17 +134,6 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         userAPI =LoginRetrofit.create(UserAPI.class);
 
-    }
-    public void GetAll(View v) {
-        startActivity(new Intent(MainActivity.this, GetAll.class));                     // Start the activity to get all images
-    }
-
-    public void Upload(View v) {
-        startActivity(new Intent(MainActivity.this, Upload.class));                     // Start the activity to upload an image
-    }
-
-    public void GetByName(View v) {
-        startActivity(new Intent(MainActivity.this, GetByName.class));                  // Start the activity to get an image by its name
     }
 
 }
