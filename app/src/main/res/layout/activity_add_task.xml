@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <!-- Here you put the rest of your current view-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.AddTask">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/titleCons"
+            android:layout_width="351dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/border_task"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <EditText
+                android:id="@+id/titleEt"
+                android:layout_width="315dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/title"
+                android:hint=" Title:"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.444"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </EditText>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/CategoryCons"
+            android:layout_width="345dp"
+            android:layout_height="106dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/border_task"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleCons">
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/category"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/Spinner_category"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+            <Spinner
+                android:id="@+id/Spinner_category"
+                android:layout_width="280dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="16dp"
+                android:entries="@array/category"
+                android:gravity="center"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.786"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                >
+
+            </Spinner>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <DatePicker
+            android:id="@+id/DateTimeDatePicker"
+            android:layout_width="339dp"
+            android:layout_height="428dp"
+            android:layout_marginTop="56dp"
+            android:calendarViewShown="true"
+            android:spinnersShown="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CategoryCons"></DatePicker>
+
+
+        <TimePicker
+            android:id="@+id/time_picker"
+            android:layout_width="336dp"
+            android:layout_height="358dp"
+            android:layout_marginTop="88dp"
+            android:layout_weight="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DateTimeDatePicker" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/descCons"
+            android:layout_width="355dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/border_task"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_picker">
+
+            <TextView
+                android:id="@+id/descriptionTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description:"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/descriptionEt"
+                android:layout_width="315dp"
+                android:layout_height="115dp"
+                android:maxLength="200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTv"></EditText>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#32A399"
+            android:onClick="addTask"
+            android:text="ADD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descCons" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

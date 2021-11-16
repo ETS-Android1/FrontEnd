@@ -191,6 +191,10 @@ public class login extends AppCompatActivity {
                             Intent output=new Intent(login.this,welcome.class);
                             output.putExtra("token",token);
                             output.putExtra("username",namel);
+                            SharedPreferences.Editor editor = ((ShanbehApp)getApplication()).sharedPreferences.edit();
+                            editor.putString("token",token);
+                            editor.putString("username",namel);
+                            editor.apply();
                             startActivity(output);
                             v.clearAnimation();
                             v.setEnabled(true);

@@ -2,10 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
+        android:name="com.example.ShanbehApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -46,6 +48,55 @@
             android:exported="true">
 
         </activity>
+            android:name="com.example.day_task_activity"
+            android:exported="true" />
+        <activity
+            android:name=".day_task_activity"
+            android:exported="true"
+            android:label="@string/title_activity_day_task"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+
+        <service
+            android:name="com.example.BroadCast.NotificationServ"
+            android:enabled="true"
+            android:exported="false"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.example.BroadCast.NotificationServ" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.example.EditTask"
+            android:exported="true" />
+        <activity
+            android:name="com.example.AddTask"
+            android:exported="true">
+            
+        </activity>
+        <activity
+            android:name="com.example.DayActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.forgetPass_email"
+            android:exported="true" />
+        <activity
+            android:name="com.example.welcome"
+            android:exported="false" />
+        <activity
+            android:name="com.example.forgotpass"
+            android:exported="false" />
+        <activity
+            android:name="com.example.login"
+            android:exported="false" />
+        <activity
+            android:name="com.example.SignUp"
+            android:exported="true" />
+        <activity
+            android:name="com.example.MainActivity"
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"

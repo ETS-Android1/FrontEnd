@@ -24,6 +24,25 @@
         <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/button_warning_background.xml" value="0.1425925925925926" />
         <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/dialog_background.xml" value="0.2703125" />
         <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/gradientbackground.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border2.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_item_task.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_recycler_background.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_red.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_red_task_error.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_selected.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_task.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_add_task.xml" value="0.264" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_day.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_day_task.xml" value="0.16052631578947368" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_edit_task.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/alert_dialog_layout.xml" value="0.264" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/content_day_task.xml" value="0.16052631578947368" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/fragment_first.xml" value="0.16052631578947368" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/fragment_second.xml" value="0.16052631578947368" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/item_view.xml" value="0.10104166666666667" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/task_view.xml" value="0.2" />
         <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_about_background.xml" value="0.14537037037037037" />
         <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_menu.xml" value="0.24479166666666666" />
         <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_profile_background.xml" value="0.24479166666666666" />

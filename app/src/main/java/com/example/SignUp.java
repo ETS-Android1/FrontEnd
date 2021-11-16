@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -16,7 +18,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.example.BroadCast.wifiBroadCast;
 import com.example.entity.User;
 import com.example.myapplication.R;
 import com.example.webService.UserAPI;
@@ -241,6 +243,10 @@ public class SignUp extends AppCompatActivity {
                                 Intent gosignup=new Intent(SignUp.this,login.class);
                                 gosignup.putExtra("token",token);
                                 gosignup.putExtra("username",username);
+                                SharedPreferences.Editor editor = ((ShanbehApp)getApplication()).sharedPreferences.edit();
+                                editor.putString("token",token);
+                                editor.putString("username",username);
+                                editor.apply();
                                 startActivity(gosignup);
                                 finish();
 
