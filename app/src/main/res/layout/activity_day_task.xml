@@ -29,6 +29,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
+        android:layout_height="70dp"
+        android:background="@color/blue_background"
+        android:drawableRight="@drawable/ic_baseline_search_24"
+        android:hint="search here"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></EditText>
 
         </ListView>
     </LinearLayout>

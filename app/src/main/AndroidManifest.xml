@@ -31,6 +31,15 @@
             </intent-filter>
         </receiver>
 
+        </activity>
+            android:name="com.example.day_task_activity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.day_task_activity"
+            android:exported="true"
+            android:label="@string/title_activity_day_task"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+
         <service
             android:name="com.example.BroadCast.NotificationServ"
             android:enabled="true"
@@ -65,21 +74,21 @@
             android:exported="false" />
         <activity
             android:name="com.example.login"
-            android:exported="false" />
-        <activity
-            android:name="com.example.SignUp"
-            android:exported="true" >
+            android:exported="false" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+	</activity>
+        <activity
+            android:name="com.example.SignUp"
+            android:exported="true" >
         </activity>
 
         <activity
             android:name="com.example.MainActivity"
             android:exported="true" />
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
