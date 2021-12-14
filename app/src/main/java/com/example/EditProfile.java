@@ -62,7 +62,8 @@ public class EditProfile extends AppCompatActivity {
                 else{
                     String code = Integer.toString(response.code());
                     User user = response.body();
-                    Toast.makeText(EditProfile.this, "Profile Edited!", Toast.LENGTH_SHORT).show();
+                    CustomSuccessAlertDialog saved = new CustomSuccessAlertDialog(EditProfile.this,"Successful","profile has been edited!");
+//                    Toast.makeText(EditProfile.this, "Profile Edited!", Toast.LENGTH_SHORT).show();
                     SharedPreferences shP = getSharedPreferences("userInformation", MODE_PRIVATE);
                     SharedPreferences.Editor myEdit = shP.edit();
                     myEdit.putString("firstname",firstNameEditText.getText().toString());

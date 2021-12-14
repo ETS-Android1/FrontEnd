@@ -103,7 +103,7 @@ public class event_activity extends AppCompatActivity {
             public void onResponse(Call<List<Event>> call, Response<List<Event>> response) {
                 if(!response.isSuccessful())
                 {
-                    CustomeAlertDialog errorConnecting = new CustomeAlertDialog(event_activity.this,"error","there is a problem connecting to server");
+                    CustomErrorAlertDialog errorConnecting = new CustomErrorAlertDialog(event_activity.this,"Error","there is a problem connecting to server");
                 }
                 else{
                     String code = Integer.toString(response.code());
@@ -118,7 +118,7 @@ public class event_activity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Event>> call, Throwable t) {
-                CustomeAlertDialog errorConnecting = new CustomeAlertDialog(event_activity.this,"error","there is a problem connecting to server");
+                CustomErrorAlertDialog errorConnecting = new CustomErrorAlertDialog(event_activity.this,"Error","there is a problem connecting to server");
             }
         });
     }
