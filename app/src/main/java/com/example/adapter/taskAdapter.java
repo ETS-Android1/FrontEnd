@@ -159,54 +159,69 @@ public class taskAdapter extends BaseAdapter implements Filterable {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(b)
                 {
-                    JsonObject jsonObject = new JsonObject();
-                    jsonObject.addProperty("task_token", currentTask.getTaskToken());
-                    jsonObject.addProperty("status", "done");
-                    Call<JsonObject> request = taskAPI.finishTask("token "+userToken,jsonObject);
-                    request.enqueue(new Callback<JsonObject>() {
-                        @Override
-                        public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
-                            if(!response.isSuccessful())
-                            {
-                                CustomeAlertDialog errorConnecting = new CustomeAlertDialog(context,"error","there is a problem with your internet connection");
-                            }
-                            else{
-                                String code = Integer.toString(response.code());
-                                //Toast.makeText(context, code, Toast.LENGTH_SHORT).show();
-                            }
-                        }
-
-                        @Override
-                        public void onFailure(Call<JsonObject> call, Throwable t) {
-                            CustomeAlertDialog errorConnecting = new CustomeAlertDialog(context,"error","there is a problem with your internet connection");
-                        }
-                    });
+//                    JsonObject jsonObject = new JsonObject();
+//                    jsonObject.addProperty("task_token", currentTask.getTaskToken());
+//                    jsonObject.addProperty("status", "done");
+//                    Call<JsonObject> request = taskAPI.finishTask("token "+userToken,jsonObject);
+//                    request.enqueue(new Callback<JsonObject>() {
+//                        @Override
+//                        public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+//                            if(!response.isSuccessful())
+//                            {
+//                                CustomeAlertDialog errorConnecting = new CustomeAlertDialog(context,"error","there is a problem with your internet connection");
+//                            }
+//                            else{
+//                                String code = Integer.toString(response.code());
+//                                //Toast.makeText(context, code, Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//
+//                        @Override
+//                        public void onFailure(Call<JsonObject> call, Throwable t) {
+//                            CustomeAlertDialog errorConnecting = new CustomeAlertDialog(context,"error","there is a problem with your internet connection");
+//                        }
+//                    });
+                    //offline part....
+                    String status = "done";
+                    tasksDB tasksdb = new tasksDB(context);
+                    String [] dateTimeInfo = currentTask.getDateTime().split("_");
+                    String date = dateTimeInfo[0];
+                    String time =dateTimeInfo[1];
+                    tasksdb.updateTask(currentTask.getTaskToken(),currentTask.getTitle(),date,time,currentTask.getDesc(),status,currentTask.getCategory());
                 }
                 else{
-                    JsonObject jsonObject = new JsonObject();
-                    jsonObject.addProperty("task_token", currentTask.getTaskToken());
-                    jsonObject.addProperty("status", "pending");
-                    Call<JsonObject> request = taskAPI.finishTask("token "+userToken,jsonObject);
-                    request.enqueue(new Callback<JsonObject>() {
-                        @Override
-                        public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
-                            if(!response.isSuccessful())
-                            {
-                                CustomeAlertDialog errorConnecting = new CustomeAlertDialog(context,"error","there is a problem with your internet connection");
+//                    JsonObject jsonObject = new JsonObject();
+//                    jsonObject.addProperty("task_token", currentTask.getTaskToken());
+//                    jsonObject.addProperty("status", "pending");
+//                    Call<JsonObject> request = taskAPI.finishTask("token "+userToken,jsonObject);
+//                    request.enqueue(new Callback<JsonObject>() {
+//                        @Override
+//                        public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+//                            if(!response.isSuccessful())
+//                            {
+//                                CustomeAlertDialog errorConnecting = new CustomeAlertDialog(context,"error","there is a problem with your internet connection");
+//
+//                            }
+//                            else{
+//                                String code = Integer.toString(response.code());
+//                                //Toast.makeText(context, code, Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//
+//                        @Override
+//                        public void onFailure(Call<JsonObject> call, Throwable t) {
+//                            CustomeAlertDialog errorConnecting = new CustomeAlertDialog(context,"error","there is a problem with your internet connection");
+//
+//                        }
+//                    });
 
-                            }
-                            else{
-                                String code = Integer.toString(response.code());
-                                //Toast.makeText(context, code, Toast.LENGTH_SHORT).show();
-                            }
-                        }
-
-                        @Override
-                        public void onFailure(Call<JsonObject> call, Throwable t) {
-                            CustomeAlertDialog errorConnecting = new CustomeAlertDialog(context,"error","there is a problem with your internet connection");
-
-                        }
-                    });
+                    //offline part....
+                    String status = "pending";
+                    tasksDB tasksdb = new tasksDB(context);
+                    String [] dateTimeInfo = currentTask.getDateTime().split("_");
+                    String date = dateTimeInfo[0];
+                    String time =dateTimeInfo[1];
+                    tasksdb.updateTask(currentTask.getTaskToken(),currentTask.getTitle(),date,time,currentTask.getDesc(),status,currentTask.getCategory());
                 }
             }
         });
@@ -220,29 +235,33 @@ public class taskAdapter extends BaseAdapter implements Filterable {
                     @Override
                     public void onClick(View view) {
                         confirmCancel.alertDialog.dismiss();
-                        JsonObject jsonObject = new JsonObject();
-                        jsonObject.addProperty("task_token", currentTask.getTaskToken());
-                        Call<JsonObject> request = taskAPI.deleteTask("token "+userToken,jsonObject);
-                        request.enqueue(new Callback<JsonObject>() {
-                            @Override
-                            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
-                                if(!response.isSuccessful())
-                                {
-                                    CustomeAlertDialog errorConnecting = new CustomeAlertDialog(context,"error","there is a problem with your internet connection");
+//                        JsonObject jsonObject = new JsonObject();
+//                        jsonObject.addProperty("task_token", currentTask.getTaskToken());
+//                        Call<JsonObject> request = taskAPI.deleteTask("token "+userToken,jsonObject);
+//                        request.enqueue(new Callback<JsonObject>() {
+//                            @Override
+//                            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+//                                if(!response.isSuccessful())
+//                                {
+//                                    CustomeAlertDialog errorConnecting = new CustomeAlertDialog(context,"error","there is a problem with your internet connection");
+//
+//                                }
+//                                else{
+//                                    String code = Integer.toString(response.code());
+//                                    //Toast.makeText(context, code, Toast.LENGTH_SHORT).show();
+//                                    remove(i);
+//                                }
+//                            }
+//
+//                            @Override
+//                            public void onFailure(Call<JsonObject> call, Throwable t) {
+//                                CustomeAlertDialog errorConnecting = new CustomeAlertDialog(context,"error","there is a problem with your internet connection");
+//                            }
+//                        });
 
-                                }
-                                else{
-                                    String code = Integer.toString(response.code());
-                                    //Toast.makeText(context, code, Toast.LENGTH_SHORT).show();
-                                    remove(i);
-                                }
-                            }
-
-                            @Override
-                            public void onFailure(Call<JsonObject> call, Throwable t) {
-                                CustomeAlertDialog errorConnecting = new CustomeAlertDialog(context,"error","there is a problem with your internet connection");
-                            }
-                        });
+                        //offline part....
+                        tasksDB tasksdb = new tasksDB(context);
+                        tasksdb.deleteTask(currentTask.getTaskToken());
                     }
                 });
 

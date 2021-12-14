@@ -17,6 +17,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.BroadCast.AlarmController;
+import com.example.DataBase.tasksDB;
 import com.example.adapter.taskAdapter;
 import com.example.entity.Task;
 import com.example.myapplication.R;
@@ -158,45 +159,51 @@ public class day_task_activity extends AppCompatActivity {
 
     public void fillList()
     {
-        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
-
-        Retrofit createTask = new Retrofit.Builder()
-                .baseUrl(TaskAPI.BASE_URL)
-                .client(client)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        taskAPI = createTask.create(TaskAPI.class);
+//        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+//        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+//        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+//
+//        Retrofit createTask = new Retrofit.Builder()
+//                .baseUrl(TaskAPI.BASE_URL)
+//                .client(client)
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build();
+//        taskAPI = createTask.create(TaskAPI.class);
 
 
         //todo
-        JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("task_token", userToken);
-        jsonObject.addProperty("alarm_check", FinalDate);
-        Call<List<Task>> request = taskAPI.getTasksDay("token "+userToken,jsonObject);
+//        JsonObject jsonObject = new JsonObject();
+//        jsonObject.addProperty("task_token", userToken);
+//        jsonObject.addProperty("alarm_check", FinalDate);
+//        Call<List<Task>> request = taskAPI.getTasksDay("token "+userToken,jsonObject);
+//
+//        request.enqueue(new Callback<List<Task>>() {
+//            @Override
+//            public void onResponse(Call<List<Task>> call, Response<List<Task>> response) {
+//                if(response.isSuccessful()==false)
+//                {
+//                    CustomeAlertDialog getTasksDayError = new CustomeAlertDialog(day_task_activity.this,"Error","there is a problem with your internet connection");
+//                }
+//                else{
+//                    int responseCode = response.code();
+//                    //Toast.makeText(day_task_activity.this, Integer.toString(responseCode), Toast.LENGTH_SHORT).show();
+//                    List<Task> listOfTasks = response.body();
+//                    tasksAdap = new taskAdapter(day_task_activity.this,listOfTasks);
+//                    list.setAdapter(tasksAdap);
+//
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<List<Task>> call, Throwable t) {
+//                CustomeAlertDialog getTasksDayError = new CustomeAlertDialog(day_task_activity.this,"Error","there is a problem with your internet connection");
+//            }
+//        });
 
-        request.enqueue(new Callback<List<Task>>() {
-            @Override
-            public void onResponse(Call<List<Task>> call, Response<List<Task>> response) {
-                if(response.isSuccessful()==false)
-                {
-                    CustomeAlertDialog getTasksDayError = new CustomeAlertDialog(day_task_activity.this,"Error","there is a problem with your internet connection");
-                }
-                else{
-                    int responseCode = response.code();
-                    //Toast.makeText(day_task_activity.this, Integer.toString(responseCode), Toast.LENGTH_SHORT).show();
-                    List<Task> listOfTasks = response.body();
-                    tasksAdap = new taskAdapter(day_task_activity.this,listOfTasks);
-                    list.setAdapter(tasksAdap);
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<Task>> call, Throwable t) {
-                CustomeAlertDialog getTasksDayError = new CustomeAlertDialog(day_task_activity.this,"Error","there is a problem with your internet connection");
-            }
-        });
+        //offline part ....
+        tasksDB tasksdb = new tasksDB(day_task_activity.this);
+        List<Task> listOfTasks = tasksdb.select(FinalDate);
+        tasksAdap = new taskAdapter(day_task_activity.this,listOfTasks);
+        list.setAdapter(tasksAdap);
     }
 }

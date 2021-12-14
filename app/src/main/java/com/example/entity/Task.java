@@ -84,6 +84,14 @@ public class Task {
         this.taskToken = taskToken;
     }
 
+    public Task(String title, String desc, String dateTime, String category, String status) {
+        this.title = title;
+        this.desc = desc;
+        this.dateTime = dateTime;
+        this.category = category;
+        this.status = status;
+    }
+
     public String getTitle() {
         return title;
     }

@@ -419,7 +419,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"></ImageView>
 
-            <EditText
+            <TextView
                 android:id="@+id/address"
                 android:layout_width="238dp"
                 android:layout_height="53dp"
@@ -429,8 +429,7 @@
                 android:textSize="14dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="SpeakableTextPresentCheck"></EditText>
+                app:layout_constraintTop_toTopOf="parent"></TextView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -442,14 +441,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/privacylayout" >
 
-            <EditText
+            <TextView
                 android:layout_width="235dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="SpeakableTextPresentCheck"></EditText>
+                app:layout_constraintTop_toTopOf="parent"></TextView>
 
             <ImageView
                 android:layout_width="50dp"
