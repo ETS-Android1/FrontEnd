@@ -257,7 +257,7 @@ public class AddEvent  extends AppCompatActivity {
             sessionsList.setAdapter(sessionAdapter);
         }
         else{
-            CustomErrorAlertDialog errorDate = new CustomErrorAlertDialog(AddEvent.this,"Error","you can not select a date in past");
+            CustomErrorAlertDialog errorDate = new CustomErrorAlertDialog(AddEvent.this,"Error","you can't not select a date in past");
         }
     }
 

@@ -103,7 +103,7 @@ public class my_sessions extends AppCompatActivity {
             public void onResponse(Call<List<Session>> call, Response<List<Session>> response) {
                 if(response.isSuccessful()==false)
                 {
-                    CustomeAlertDialog getTasksDayError = new CustomeAlertDialog(my_sessions.this,"Error","there is a problem with your internet connection");
+                    CustomErrorAlertDialog getTasksDayError = new CustomErrorAlertDialog(my_sessions.this,"Error","there is a problem with your internet connection");
                 }
                 else{
                     int responseCode = response.code();
@@ -118,7 +118,7 @@ public class my_sessions extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Session>> call, Throwable t) {
-                CustomeAlertDialog getTasksDayError = new CustomeAlertDialog(my_sessions.this,"Error","there is a problem with your internet connection");
+                CustomErrorAlertDialog getTasksDayError = new CustomErrorAlertDialog(my_sessions.this,"Error","there is a problem with your internet connection");
             }
         });
     }

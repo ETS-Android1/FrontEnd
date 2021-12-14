@@ -90,7 +90,7 @@ public class my_created_events extends AppCompatActivity {
             public void onResponse(Call<List<Event>> call, Response<List<Event>> response) {
                 if(!response.isSuccessful())
                 {
-                    CustomeAlertDialog myEvents = new CustomeAlertDialog(my_created_events.this,"Error","There is a problem with your internet connection");
+                    CustomErrorAlertDialog myEvents = new CustomErrorAlertDialog(my_created_events.this,"Error","There is a problem with your internet connection");
                 }
                 else{
                     int responseCode = response.code();
@@ -103,7 +103,7 @@ public class my_created_events extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Event>> call, Throwable t) {
-                CustomeAlertDialog myEvents = new CustomeAlertDialog(my_created_events.this,"Error","There is a problem with your internet connection");
+                CustomErrorAlertDialog myEvents = new CustomErrorAlertDialog(my_created_events.this,"Error","There is a problem with your internet connection");
             }
         });
     }
