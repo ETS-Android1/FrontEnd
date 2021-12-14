@@ -191,14 +191,14 @@ public class AddTask extends AppCompatActivity {
 
         if(categoryStr.equals(""))
         {
-            CustomeAlertDialog categortyEmpyt = new CustomeAlertDialog(this,"error","please fill the category field");
+            CustomErrorAlertDialog categortyEmpyt = new CustomErrorAlertDialog(this,"Error","please fill the category field");
         }
 
         String titleStr = title.getText().toString();
         String descStr = desc.getText().toString();
         if(titleStr.equals(""))
         {
-            CustomeAlertDialog titleError = new CustomeAlertDialog(this,"Error","fill the title field");
+            CustomErrorAlertDialog titleError = new CustomErrorAlertDialog(this,"Error","fill the title field");
             //Toast.makeText(this, "fill the title field", Toast.LENGTH_SHORT).show();
             titleCons.setBackgroundResource(R.drawable.border_red_task_error);
         }
@@ -206,7 +206,7 @@ public class AddTask extends AppCompatActivity {
         {
             descCons.setBackgroundResource(R.drawable.border_red_task_error);
             //Toast.makeText(this, "fill the description field", Toast.LENGTH_SHORT).show();
-            CustomeAlertDialog messageError = new CustomeAlertDialog(this,"Error","fill the description field");
+            CustomErrorAlertDialog messageError = new CustomErrorAlertDialog(this,"Error","fill the description field");
         }
 
         if(checkDate(year,month,day,hour,min) && !titleStr.equals("") && !descStr.equals("")&& !categoryStr.equals(""))
@@ -233,7 +233,7 @@ public class AddTask extends AppCompatActivity {
                 public void onResponse(Call<TaskSession> call, Response<TaskSession> response) {
                     if(!response.isSuccessful())
                     {
-                        CustomeAlertDialog errorConnecting = new CustomeAlertDialog(AddTask.this,"error","there is a problem connecting to server");
+                        CustomErrorAlertDialog errorConnecting = new CustomErrorAlertDialog(AddTask.this,"error","there is a problem connecting to server");
                     }
                     else{
                         String code = Integer.toString(response.code());
@@ -251,7 +251,7 @@ public class AddTask extends AppCompatActivity {
                         long res = tasksdb.insert(task_token,title,date,time);
                         //Toast.makeText(AddTask.this,task_token, Toast.LENGTH_SHORT).show();
 
-                        CustomeAlertDialog saved = new CustomeAlertDialog(AddTask.this,"Successful","task saved");
+                        CustomSuccessAlertDialog saved = new CustomSuccessAlertDialog(AddTask.this,"Successful","task saved");
                         saved.btnOk.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
@@ -263,7 +263,7 @@ public class AddTask extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<TaskSession> call, Throwable t) {
-                    CustomeAlertDialog errorConnecting = new CustomeAlertDialog(AddTask.this,"error","there is a problem connecting to server");
+                    CustomErrorAlertDialog errorConnecting = new CustomErrorAlertDialog(AddTask.this,"error","there is a problem connecting to server");
 
                 }
             });
@@ -310,7 +310,7 @@ public class AddTask extends AppCompatActivity {
         {
             return true;
         }
-        CustomeAlertDialog dateAlert = new CustomeAlertDialog(this,"error","you can set a task for past");
+        CustomErrorAlertDialog dateAlert = new CustomErrorAlertDialog(this,"Error","you can set a task for past");
         //Toast.makeText(this, "you can set a task for past", Toast.LENGTH_SHORT).show();
         return false;
 
