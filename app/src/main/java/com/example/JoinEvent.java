@@ -130,7 +130,7 @@ public class JoinEvent extends AppCompatActivity {
                                 } else {
                                     String code = Integer.toString(response.code());
                                     Session session = response.body();
-                                    CustomeAlertDialog saved = new CustomeAlertDialog(JoinEvent.this,"Alert!","Successfully joined");
+                                    CustomSuccessAlertDialog saved = new CustomSuccessAlertDialog(JoinEvent.this,"Alert!","Successfully joined");
                                     saved.btnOk.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View view) {

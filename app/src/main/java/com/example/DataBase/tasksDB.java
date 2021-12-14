@@ -23,9 +23,6 @@ public class tasksDB extends SQLiteOpenHelper {
     private static final String TITLE_COL = "title";
     private static final String DATE_COL = "date";
     private static final String TIME_COL = "time";
-    private static final String STATE_COL = "state";
-    private static final String CATEGORY_COL = "category";
-    private static final String DESC_COL = "description";
 
     public tasksDB(@Nullable Context context) {
         super(context,DB_NAME,null,DB_VERSION);
@@ -34,43 +31,35 @@ public class tasksDB extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String query = "CREATE TABLE "+TABLE_NAME+" ("
-                +TOKEN_COL+" INTEGER PRIMARY KEY AUTOINCREMENT, "
+                +TOKEN_COL+" varchar(60) PRIMARY KEY , "
                 +TITLE_COL+" varchar(40) , "
                 +DATE_COL+ " varchar(20) , "
-                +TIME_COL+" varchar(20) ,"
-                +DESC_COL+" varchar(120) ,"
-                +STATE_COL+" varchar(20) ,"
-                +CATEGORY_COL+" varchar(20) )";
+                +TIME_COL+" varchar(20) )";
         sqLiteDatabase.execSQL(query);
     }
 
 
-    public long insert(String title,String date,String time,String desc,String state,String category)
+    public long insert(String token,String title,String date,String time)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
+        values.put(TOKEN_COL,token);
         values.put(TITLE_COL,title);
         values.put(DATE_COL,date);
         values.put(TIME_COL,time);
-        values.put(DESC_COL,desc);
-        values.put(STATE_COL,state);
-        values.put(CATEGORY_COL,category);
 
         long result = db.insert(TABLE_NAME,null,values);
         //db.close();
         return result;
     }
 
-    public void updateTask(String token,String title,String date ,String time,String desc,String state,String category)
+    public void updateTask(String token,String title,String date ,String time)
     {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(TITLE_COL,title);
         values.put(DATE_COL,date);
         values.put(TIME_COL,time);
-        values.put(DESC_COL,desc);
-        values.put(STATE_COL,state);
-        values.put(CATEGORY_COL,category);
         String where = TOKEN_COL+"=?";
         String whereArgs[] = {token};
         db.update(TABLE_NAME,values,where,whereArgs);
@@ -89,23 +78,18 @@ public class tasksDB extends SQLiteOpenHelper {
         //String dql = "SELECT "+TOKEN_COL+","+TITLE_COL+","+TIME_COL +","+DATE_COL+" FROM "+TABLE_NAME;
         ArrayList<Task> tasks = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(TABLE_NAME,new String [] {TOKEN_COL,TITLE_COL,TIME_COL,DATE_COL,DESC_COL,CATEGORY_COL,STATE_COL},null,null,null,null,null);
+        Cursor cursor = db.query(TABLE_NAME,new String [] {TOKEN_COL,TITLE_COL,TIME_COL,DATE_COL},null,null,null,null,null);
 
         if(cursor.getCount()>0)
         {
             while(cursor.moveToNext())
             {
-                int token = cursor.getInt(0);
-                String tokenStr = Integer.toString(token);
+                String token = cursor.getString(0);
                 String title = cursor.getString(1);
                 String time = cursor.getString(2);
                 String date = cursor.getString(3);
-                String desc = cursor.getString(4);
-                String category = cursor.getString(5);
-                String state = cursor.getString(6);
                 String datetime = date+"_"+time;
-                Task newTask = new Task(title,desc,datetime, category, state);
-                newTask.setTaskToken(tokenStr);
+                Task newTask = new Task(title,datetime,token);
                 tasks.add(newTask);
             }
         }
@@ -118,22 +102,17 @@ public class tasksDB extends SQLiteOpenHelper {
     {
         ArrayList<Task> tasks = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(TABLE_NAME,new String[]{TOKEN_COL,TITLE_COL,TIME_COL,DATE_COL,DESC_COL,CATEGORY_COL,STATE_COL},DATE_COL+" =?",new String[]{date},null,null,null);
+        Cursor cursor = db.query(TABLE_NAME,new String[]{TOKEN_COL,TITLE_COL,TIME_COL,DATE_COL},DATE_COL+" =?",new String[]{date},null,null,null);
         if(cursor.getCount()>0)
         {
             while(cursor.moveToNext())
             {
-                int token = cursor.getInt(0);
-                String tokenStr = Integer.toString(token);
+                String token = cursor.getString(0);
                 String title = cursor.getString(1);
                 String time = cursor.getString(2);
                 String Date = cursor.getString(3);
-                String desc = cursor.getString(4);
-                String category = cursor.getString(5);
-                String state = cursor.getString(6);
                 String datetime = date+"_"+time;
-                Task newTask = new Task(title,desc,datetime, category, state);
-                newTask.setTaskToken(tokenStr);
+                Task newTask = new Task(title,datetime,token);
                 tasks.add(newTask);
             }
         }
