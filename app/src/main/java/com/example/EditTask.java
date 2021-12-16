@@ -223,7 +223,7 @@ public class EditTask extends AppCompatActivity {
         {
             return true;
         }
-        CustomErrorAlertDialog dateAlert = new CustomErrorAlertDialog(this,"Error","you can't set a task for past");
+        CustomeAlertDialog dateAlert = new CustomeAlertDialog(this,"error","you can set a task for past");
         //Toast.makeText(this, "you can set a task for past", Toast.LENGTH_SHORT).show();
         return false;
 
@@ -240,14 +240,14 @@ public class EditTask extends AppCompatActivity {
 
         if(categoryStr.equals(""))
         {
-            CustomErrorAlertDialog categortyEmpyt = new CustomErrorAlertDialog(this,"Error","please fill the category field");
+            CustomeAlertDialog categortyEmpyt = new CustomeAlertDialog(this,"error","please fill the category field");
         }
 
         String titleStr = editTitle.getText().toString();
         String descStr = editdesc.getText().toString();
         if(titleStr.equals(""))
         {
-            CustomErrorAlertDialog titleError = new CustomErrorAlertDialog(this,"Error","fill the title field");
+            CustomeAlertDialog titleError = new CustomeAlertDialog(this,"Error","fill the title field");
             //Toast.makeText(this, "fill the title field", Toast.LENGTH_SHORT).show();
             editTitleCons.setBackgroundResource(R.drawable.border_red_task_error);
         }
@@ -255,7 +255,7 @@ public class EditTask extends AppCompatActivity {
         {
             editDescCons.setBackgroundResource(R.drawable.border_red_task_error);
             //Toast.makeText(this, "fill the description field", Toast.LENGTH_SHORT).show();
-            CustomErrorAlertDialog messageError = new CustomErrorAlertDialog(this,"Error","fill the description field");
+            CustomeAlertDialog messageError = new CustomeAlertDialog(this,"Error","fill the description field");
         }
 
         if(checkDate(year,month,day,hour,min) && !titleStr.equals("") && !descStr.equals("")&& !categoryStr.equals(""))
@@ -281,7 +281,7 @@ public class EditTask extends AppCompatActivity {
                 public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
                     if(!response.isSuccessful())
                     {
-                        CustomErrorAlertDialog errorConnecting = new CustomErrorAlertDialog(EditTask.this,"Error","there is a problem with your internet connection");
+                        CustomeAlertDialog errorConnecting = new CustomeAlertDialog(EditTask.this,"error","there is a problem with your internet connection");
                     }
                     else{
                         String code = Integer.toString(response.code());
@@ -295,7 +295,7 @@ public class EditTask extends AppCompatActivity {
                         tasksDB tasksdb = new tasksDB(EditTask.this);
                         tasksdb.updateTask(task_token,title,date,time);
                         //Toast.makeText(EditTask.this,task_token, Toast.LENGTH_SHORT).show();
-                        CustomSuccessAlertDialog saved = new CustomSuccessAlertDialog(EditTask.this,"Successful","task updated");
+                        CustomeAlertDialog saved = new CustomeAlertDialog(EditTask.this,"Successful","task updated");
                         saved.btnOk.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
@@ -307,7 +307,7 @@ public class EditTask extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<JsonObject> call, Throwable t) {
-                    CustomErrorAlertDialog errorConnecting = new CustomErrorAlertDialog(EditTask.this,"Error","there is a problem connecting to server");
+                    CustomeAlertDialog errorConnecting = new CustomeAlertDialog(EditTask.this,"error","there is a problem connecting to server");
 
                 }
             });
