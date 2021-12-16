@@ -3,13 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:background="@color/side_bar_background">
     <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/imageProfile"
+        android:id="@+id/imageProfileSmall"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/profile_picture"
+        android:src="@drawable/acount_circle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:riv_oval="true"/>
@@ -17,11 +18,12 @@
         android:id="@+id/viewSupporter"
         android:layout_width="1dp"
         android:layout_height="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageProfile"
-        app:layout_constraintEnd_toEndOf="@+id/imageProfile"
-        app:layout_constraintStart_toStartOf="@id/imageProfile"
-        app:layout_constraintTop_toTopOf="@id/imageProfile"/>
+        app:layout_constraintBottom_toBottomOf="@+id/imageProfileSmall"
+        app:layout_constraintEnd_toEndOf="@+id/imageProfileSmall"
+        app:layout_constraintStart_toStartOf="@id/imageProfileSmall"
+        app:layout_constraintTop_toTopOf="@id/imageProfileSmall"/>
     <TextView
+        android:id="@+id/headerUsernameTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -29,7 +31,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/viewSupporter"
-        app:layout_constraintStart_toEndOf="@id/imageProfile"
+        app:layout_constraintStart_toEndOf="@id/imageProfileSmall"
         />
     <TextView
         android:layout_width="0dp"
@@ -38,7 +40,7 @@
         android:text="@string/verified"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@id/imageProfile"
+        app:layout_constraintStart_toEndOf="@id/imageProfileSmall"
         app:layout_constraintTop_toBottomOf="@id/viewSupporter"
         />
 

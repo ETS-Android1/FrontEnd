@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bacground_eight"
-    tools:context=".forgetPass_email">
+    tools:context="com.example.forgetPass_email">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/logo2"

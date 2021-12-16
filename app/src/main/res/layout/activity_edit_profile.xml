@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientbackground"
+    tools:context="com.example.EditProfile">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logo1"
+        android:layout_width="121dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="553dp"
+        app:cardCornerRadius="121dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="121dp"
+            android:layout_height="121dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="250dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo_third" />
+
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+    <EditText
+        android:id="@+id/firstNameIde"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="244dp"
+        android:background="@drawable/border"
+        android:drawableLeft="@drawable/ic_action_name"
+        android:drawablePadding="7dp"
+        android:ems="10"
+        android:fontFamily="@font/indie_flower"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+
+        android:textColor="@color/teal_200"
+        android:textColorHint="@color/hintColor"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/lastNameIde"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/border"
+        android:drawableLeft="@drawable/ic_action_name"
+        android:drawablePadding="7dp"
+        android:ems="10"
+        android:fontFamily="@font/indie_flower"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+
+        android:textColor="@color/teal_200"
+        android:textColorHint="@color/hintColor"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstNameIde"  />
+
+    <EditText
+        android:textColorHint="@color/hintColor"
+        android:id="@+id/eemailid"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/border"
+        android:drawableLeft="@drawable/ic_action_mail"
+        android:drawablePadding="7dp"
+        android:ems="10"
+        android:fontFamily="@font/indie_flower"
+        android:foregroundGravity="center_horizontal"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:textColor="@color/teal_200"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameIde" />
+
+    <EditText
+        android:id="@+id/phoneNumberIde"
+
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/border"
+        android:drawableLeft="@drawable/ic_baseline_local_phone_24"
+        android:drawablePadding="7dp"
+        android:ems="10"
+        android:fontFamily="@font/indie_flower"
+        android:hint="Phone Number"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/teal_200"
+        android:textColorHint="@color/hintColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eemailid" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewEditProfile"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:onClick="EditButtonClicked"
+        android:padding="10dp"
+        app:cardBackgroundColor="#07F4DE"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberIde">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/editInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/indie_flower"
+                android:padding="5dp"
+                android:text="Edit"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

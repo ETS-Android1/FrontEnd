@@ -20,15 +20,128 @@
         <entry key="..\:/AndroidProjects/Tahlil_application/android(sprint1) - Copy/app/src/main/res/layout/calendar_layout.xml" value="0.190625" />
         <entry key="..\:/AndroidProjects/Tahlil_application/android(sprint1) - Copy/app/src/main/res/layout/recycler_view_item.xml" value="0.190625" />
         <entry key="..\:/AndroidProjects/Tahlil_application/android(sprint1) - Copy/app/src/main/res/layout/single_cell_layout.xml" value="0.190625" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable-anydpi/ic_action_mail.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable-normal/delete1.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable-small/delete1.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable-xxhdpi/images.xml" value="0.1368421052631579" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border2.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_event.xml" value="0.1707236842105263" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_event_error.xml" value="0.1707236842105263" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_event_sessions.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_item_task.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_recycler_background.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_red.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_red_task_error.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_selected.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_sessions_list.xml" value="0.22179487179487178" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_shadow.xml" value="0.14375" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/border_task.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/delete_button.xml" value="0.2703125" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/dummy_background.xml" value="0.1796875" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/drawable/dummy_background_border.xml" value="0.21510416666666668" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_add_event.xml" value="0.136" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_add_task.xml" value="0.264" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_day.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_day_task.xml" value="0.16052631578947368" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_edit_task.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_event.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_join_event.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_main.xml" value="0.1375" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_my_created_events.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_my_sessions.xml" value="0.16052631578947368" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/activity_reserverd_session.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/alert_dialog_layout.xml" value="0.264" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/confirmation_alert_dialog.xml" value="0.264" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/content_day_task.xml" value="0.16052631578947368" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/edit_event.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/event_view.xml" value="0.536" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/filters_evant.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/fragment_first.xml" value="0.16052631578947368" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/fragment_second.xml" value="0.16052631578947368" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/item_view.xml" value="0.10104166666666667" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/list_item.xml" value="0.190625" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/my_event_view.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/reserved_session_item.xml" value="0.536" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/session_item.xml" value="0.4" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/sessionjoin_item.xml" value="0.16052631578947368" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/layout/task_view.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/shanbe_talil_app/FrontEnd/app/src/main/res/menu/navigation_menu.xml" value="0.16052631578947368" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable-anydpi/ic_action_mail.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable-anydpi/ic_action_pass.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/gradientbackground.xml" value="0.2703125" />
         <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_about_background.xml" value="0.14537037037037037" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_baseline_calendar_today_24.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_baseline_group_24.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_baseline_group_add_24.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_baseline_local_phone_24.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_baseline_phone_android_24.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_baseline_privacy_tip_24.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_baseline_work_24.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_menu.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_profile_background.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_signout_background.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_support_background.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_warning.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_wave.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/ic_wave__5_.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/image.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/drawable/image_border.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/activity_add_event.xml" value="0.2" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/activity_add_task.xml" value="0.23143115942028986" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/activity_day.xml" value="0.23143115942028986" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/activity_day_task.xml" value="0.23143115942028986" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/activity_edit_profile.xml" value="0.14356884057971014" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/activity_edit_task.xml" value="0.13854166666666667" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/activity_event.xml" value="0.264" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/activity_join_event.xml" value="0.2028985507246377" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/activity_join_private_event.xml" value="0.24003623188405798" />
         <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/calendar_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/event_view.xml" value="0.264" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/filters_evant.xml" value="0.223731884057971" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/fragment_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/fragment_support.xml" value="0.1" />
         <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/layout_navigation_header.xml" value="0.1875" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/layout_warning_dialog.xml" value="0.13854166666666667" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/list_item.xml" value="0.13854166666666667" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/movie_row.xml" value="0.1" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/recycler_view_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/single_cell_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/layout/task_view.xml" value="0.223731884057971" />
         <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/menu/navigation_menu.xml" value="0.264" />
         <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/mipmap-anydpi-v26/ic_about.xml" value="0.14537037037037037" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/mipmap-anydpi-v26/ic_about_round.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/mipmap-anydpi-v26/ic_profile.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/mipmap-anydpi-v26/ic_profile_round.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/mipmap-anydpi-v26/ic_signout.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/mipmap-anydpi-v26/ic_signout_round.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/mipmap-anydpi-v26/ic_support.xml" value="0.2703125" />
+        <entry key="..\:/Repos/MainProject/FrontEnd/app/src/main/res/mipmap-anydpi-v26/ic_support_round.xml" value="0.2703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_forgotpass.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_welcome.xml" value="0.1793478260869565" />
+        <entry key="..\:/p/FrontEnd/app/src/main/res/layout/layout_navigation_header.xml" value="0.12001811594202899" />
+        <entry key="..\:/p/FrontEnd/app/src/main/res/menu/navigation_menu.xml" value="0.1265625" />
+        <entry key="..\:/project tahlil/FrontEnd/FrontEnd/app/src/main/res/drawable/border_editevent.xml" value="0.12037037037037036" />
+        <entry key="..\:/project tahlil/FrontEnd/FrontEnd/app/src/main/res/drawable/border_event.xml" value="0.1638888888888889" />
+        <entry key="..\:/project tahlil/FrontEnd/FrontEnd/app/src/main/res/drawable/border_session.xml" value="0.12037037037037036" />
+        <entry key="..\:/project tahlil/FrontEnd/FrontEnd/app/src/main/res/drawable/edit_event.xml" value="0.1" />
+        <entry key="..\:/project tahlil/FrontEnd/FrontEnd/app/src/main/res/layout/activity_add_event.xml" value="0.264" />
+        <entry key="..\:/project tahlil/FrontEnd/FrontEnd/app/src/main/res/layout/activity_event.xml" value="0.176" />
+        <entry key="..\:/project tahlil/FrontEnd/FrontEnd/app/src/main/res/layout/edit_event.xml" value="0.264" />
+        <entry key="..\:/project tahlil/FrontEnd/FrontEnd/app/src/main/res/layout/event_view.xml" value="0.264" />
+        <entry key="..\:/project tahlil/FrontEnd/FrontEnd/app/src/main/res/layout/filters_evant.xml" value="0.2" />
+        <entry key="..\:/project tahlil/FrontEnd/FrontEnd/app/src/main/res/layout/session_item.xml" value="0.2" />
       </map>
     </option>
   </component>

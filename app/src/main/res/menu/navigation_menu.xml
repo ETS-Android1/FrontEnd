@@ -1,19 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/menuItemProfile"
-        android:icon="@mipmap/ic_profile"
-        android:title="@string/profile"/>
-    <item android:id="@+id/supportItemProfile"
-        android:icon="@mipmap/ic_support"
-        android:title="@string/support"/>
-    <item android:id="@+id/aboutItemProfile"
-        android:icon="@mipmap/ic_about"
-        android:title="@string/about"/>
+    <item
+        android:id="@+id/menuItemCalendar"
+        android:icon="@mipmap/calendar"
+        android:title="@string/calendar" />
+    <item
+        android:id="@+id/menuItemProfile"
+        android:icon="@mipmap/profile"
+        android:title="@string/profile" />
+    <item
+        android:id="@+id/menuItemSupport"
+        android:icon="@mipmap/support"
+        android:title="@string/support" />
+    <item
+        android:id="@+id/menuItemAbout"
+        android:icon="@mipmap/about"
+        android:title="@string/about" />
+    <item android:title="Event">
+        <menu>
+            <item
+                android:id="@+id/menuItemEvent"
+                android:icon="@drawable/ic_baseline_search_24"
+                android:onClick="EventClicked"
+                android:title="@string/search_join" />
+            <item
+                android:id="@+id/gotoMyEventsNav"
+                android:icon="@mipmap/event"
+                android:onClick="goMyEvent"
+                android:title="My Events" />
+            <item
+                android:id="@+id/menuItemMySessions"
+                android:icon="@drawable/ic_baseline_group_24"
+                android:onClick="MySessionsClicked"
+                android:title="My sessions" />
+            <item
+                android:id="@+id/menuItemPrivateEvent"
+                android:icon="@drawable/ic_baseline_privacy_tip_24"
+                android:onClick="EventPrivateClicked"
+                android:title="@string/private_event" />
+
+        </menu>
+    </item>
     <item android:title="@string/others">
         <menu>
-            <item android:id="@+id/signoutItemProfile"
-                android:icon="@mipmap/ic_signout"
-                android:title="@string/sign_out"/>
+            <item
+                android:id="@+id/signoutItemProfile"
+                android:icon="@mipmap/logout"
+                android:onClick="LogoutClicked"
+                android:title="Logout" />
         </menu>
     </item>
 </menu>

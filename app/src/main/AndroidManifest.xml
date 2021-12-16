@@ -2,9 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name="com.example.ShanbehApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,22 +16,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name="com.example.cutsomcalendarfinal.DayActivity"
+            android:name="com.example.JoinPrivateEvent"
             android:exported="false" />
         <activity
-            android:name=".forgetPass_email"
+            android:name="com.example.reserverd_session"
             android:exported="true" />
         <activity
-            android:name=".welcome"
+            android:name="com.example.my_sessions"
+            android:exported="true" />
+        <activity
+            android:name="com.example.my_created_events"
+            android:exported="true" />
+        <activity
+            android:name="com.example.JoinEvent"
             android:exported="false" />
         <activity
-            android:name=".forgotpass"
+            android:name="com.example.event_activity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.EditProfile"
             android:exported="false" />
         <activity
-            android:name=".login"
+            android:name="com.example.DayActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUp"
+            android:name="com.example.forgetPass_email"
+            android:exported="true" />
+        <activity
+            android:name="com.example.welcome"
+            android:exported="false" />
+        <activity
+            android:name="com.example.forgotpass"
+            android:exported="false" />
+        <activity
+            android:name="com.example.login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,9 +58,56 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.cutsomcalendarfinal.MainActivity"
+            android:name="com.example.EditEventActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.AddEvent"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.example.BroadCast.OnAlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name="com.example.BroadCast.OnBootReceiver"
+            android:enabled="true"
             android:exported="true">
-        </activity>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED  " />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.example.BroadCast.NotificationServ"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.example.BroadCast.NotificationServ" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.example.day_task_activity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.EditTask"
+            android:exported="true" />
+        <activity
+            android:name="com.example.AddTask"
+            android:exported="true" />
+        <activity
+            android:name="com.example.FilterEvents"
+            android:exported="true" />
+        <activity
+            android:name="com.example.SignUp"
+            android:exported="true" />
+        <activity
+            android:name="com.example.MainActivity"
+            android:exported="true" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

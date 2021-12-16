@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/menuItemCalendar">
+
+    <fragment
+        android:id="@+id/menuItemCalendar"
+        android:name="com.example.mainFragment"
+        android:label="Calendar"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/menuItemProfile"
+        android:name="com.example.profileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/menuItemAbout"
+        android:name="com.example.aboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/menuItemSupport"
+        android:name="com.example.supportFragment"
+        android:label="fragment_support"
+        tools:layout="@layout/fragment_support" />
+</navigation>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/border_recycler_background"
+    android:backgroundTint="#EFEFFF">
+
+
+    <TextView
+        android:id="@+id/dateJoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_recycler_background"
+        android:backgroundTint="#948bff"
+        android:padding="10dp"
+        android:text="Date"
+        app:layout_constraintEnd_toStartOf="@id/timeJoin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeJoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_recycler_background"
+        android:padding="10dp"
+        android:backgroundTint="#948bff"
+        android:text="Time"
+        app:layout_constraintEnd_toEndOf="@id/limitJoin"
+        app:layout_constraintStart_toEndOf="@+id/dateJoin"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/limitJoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_recycler_background"
+        android:padding="10dp"
+        android:backgroundTint="#948bff"
+        android:text="Limit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/timeJoin"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,226 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="profile">Profile</string>
     <string name="support">Support</string>
     <string name="about">About</string>
     <string name="others">Others</string>
     <string name="sign_out">Sign out</string>
     <string name="john_doe">John Doe</string>
     <string name="verified">Verified</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile">Profile</string>
+    <string name="calendar">Calendar</string>
+    <string name="empty"> EMPTY</string>
+    <string-array name="category">
+        <item></item>
+        <item>Sport</item>
+        <item>Study</item>
+        <item>Meeting</item>
+        <item>Work</item>
+        <item>hang out</item>
+    </string-array>
+
+    <string-array name="privacy">
+        <item></item>
+        <item>Public</item>
+        <item>Private</item>
+    </string-array>
+    <string-array name="location">
+        <item></item>
+        <item>azarbayjan sharqi</item>
+        <item>azarbayjan gharbi</item>
+        <item>Ardabil</item>
+        <item>Esfahan</item>
+        <item>Alborz</item>
+        <item>Ilam</item>
+        <item>Bushehr</item>
+        <item>Tehran</item>
+        <item>Chaharmahal va Bakhtiari</item>
+        <item>Khorasan jonoobi</item>
+        <item>Khorasan Razavi</item>
+        <item>Khorasan shomali</item>
+        <item>Khuzestan</item>
+        <item>Zanjan</item>
+        <item>Sistan va Baluchestan</item>
+        <item>Qom</item>
+        <item>Kerman</item>
+        <item>Kermanshah</item>
+        <item>Golestan</item>
+        <item>Mazandaran</item>
+        <item>Hormozgan</item>
+        <item>Hamedan</item>
+        <item>Yazd</item>
+        <item>Markazi</item>
+        <item>Semnan</item>
+        <item>Fars</item>
+        <item>Qazvin</item>
+        <item>Kurdestan</item>
+        <item>Gilan</item>
+        <item>Lorestan</item>
+        <item>Kohgiloyeh va Boyerahmad</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>yyyy</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+
+    </string-array>
+    <string-array name="month">
+        <item>mm</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="day">
+        <item>dd</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+    <string-array name="hour">
+        <item>hh</item>
+        <item>00</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+
+    </string-array>
+
+    <string-array name="min">
+        <item>mm</item>
+        <item>00</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+
+    </string-array>
+
+
+    <string name="title_activity_day_task">day_task_activity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="event">Event</string>
+    <string name="private_event">Private Event</string>
+    <string name="search_join"><![CDATA[Search & Join]]></string>
 </resources>
