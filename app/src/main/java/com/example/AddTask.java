@@ -263,10 +263,71 @@ public class AddTask extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<TaskSession> call, Throwable t) {
-                    CustomErrorAlertDialog errorConnecting = new CustomErrorAlertDialog(AddTask.this,"Error","there is a problem connecting to server");
+                    CustomErrorAlertDialog errorConnecting = new CustomErrorAlertDialog(AddTask.this,"error","there is a problem connecting to server");
 
-                }
-            });
+
+//            Call<TaskSession> callBack =taskAPI.createTask("token "+userToken,newTask);
+//            callBack.enqueue(new Callback<TaskSession>() {
+//                @Override
+//                public void onResponse(Call<TaskSession> call, Response<TaskSession> response) {
+//                    if(!response.isSuccessful())
+//                    {
+//                        CustomeAlertDialog errorConnecting = new CustomeAlertDialog(AddTask.this,"error","there is a problem connecting to server");
+//                    }
+//                    else{
+//                        String code = Integer.toString(response.code());
+//                        TaskSession savedTaskSession = response.body();
+//                        Task savedTask = savedTaskSession.getTask();
+//                        String task_token = savedTask.getTaskToken();
+//                        String title = savedTask.getTitle();
+//                        String dateTime = savedTask.getDateTime();
+//                        String [] infos = dateTime.split("_");
+//                        String date = infos[0];
+//                        String time = infos[1];
+//                        //Toast.makeText(AddTask.this, code, Toast.LENGTH_SHORT).show();
+//
+//                        tasksDB tasksdb = new tasksDB(AddTask.this);
+//                        long res = tasksdb.insert(task_token,title,date,time);
+//                        //Toast.makeText(AddTask.this,task_token, Toast.LENGTH_SHORT).show();
+//
+//                        CustomeAlertDialog saved = new CustomeAlertDialog(AddTask.this,"Successful","task saved");
+//                        saved.btnOk.setOnClickListener(new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View view) {
+//                                finish();
+//                            }
+//                        });
+//                    }
+//                }
+//
+//                @Override
+//                public void onFailure(Call<TaskSession> call, Throwable t) {
+//                    CustomeAlertDialog errorConnecting = new CustomeAlertDialog(AddTask.this,"error","there is a problem connecting to server");
+//
+//                }
+//            });
+
+
+
+
+
+            //for offline part....
+            tasksDB tasksdb = new tasksDB(AddTask.this);
+            String [] dateTimeInfo = datetime.split("_");
+            String date = dateTimeInfo[0];
+            String time = dateTimeInfo[1];
+            long res = tasksdb.insert(titleStr,date,time,descStr,status,categoryStr);
+            if(res >=0)
+            {
+                Toast.makeText(this, "saved", Toast.LENGTH_SHORT).show();
+                CustomeAlertDialog saved = new CustomeAlertDialog(AddTask.this,"Successful","task saved");
+                saved.btnOk.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        finish();
+                    }
+                });
+            }
         }
     }
 

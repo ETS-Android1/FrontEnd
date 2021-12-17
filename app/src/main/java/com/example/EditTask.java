@@ -274,9 +274,53 @@ public class EditTask extends AppCompatActivity {
             String datetime = Integer.toString(year)+"-"+Integer.toString(month)+"-"+Integer.toString(day)+"_"+hours+":"+mins;
             //Toast.makeText(this, datetime, Toast.LENGTH_SHORT).show();
             Task newTask = new Task(titleStr,descStr, datetime, categoryStr, "time for "+categoryStr,task_token);
+//
+//            Call<JsonObject> callback = taskAPI.editTask("token "+userToken,newTask);
+//            callback.enqueue(new Callback<JsonObject>() {
+//                @Override
+//                public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+//                    if(!response.isSuccessful())
+//                    {
+//                        CustomeAlertDialog errorConnecting = new CustomeAlertDialog(EditTask.this,"error","there is a problem with your internet connection");
+//                    }
+//                    else{
+//                        String code = Integer.toString(response.code());
+//                        //Toast.makeText(EditTask.this, code, Toast.LENGTH_SHORT).show();
+//                        String task_token = newTask.getTaskToken();
+//                        String title = newTask.getTitle();
+//                        String dateTime = newTask.getDateTime();
+//                        String [] infos = dateTime.split("_");
+//                        String date = infos[0];
+//                        String time = infos[1];
+//                        tasksDB tasksdb = new tasksDB(EditTask.this);
+//                        tasksdb.updateTask(task_token,title,date,time);
+//                        //Toast.makeText(EditTask.this,task_token, Toast.LENGTH_SHORT).show();
+//                        CustomeAlertDialog saved = new CustomeAlertDialog(EditTask.this,"Successful","task updated");
+//                        saved.btnOk.setOnClickListener(new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View view) {
+//                                finish();
+//                            }
+//                        });
+//                    }
+//                }
+//
+//                @Override
+//                public void onFailure(Call<JsonObject> call, Throwable t) {
+//                    CustomeAlertDialog errorConnecting = new CustomeAlertDialog(EditTask.this,"error","there is a problem connecting to server");
+//
+//                }
+//            });
 
-            Call<JsonObject> callback = taskAPI.editTask("token "+userToken,newTask);
-            callback.enqueue(new Callback<JsonObject>() {
+            //offline part....
+            tasksDB taskdb = new tasksDB(EditTask.this);
+            String [] dateTimeInfo = datetime.split("_");
+            String date = dateTimeInfo[0];
+            String time = dateTimeInfo[1];
+            taskdb.updateTask(task_token,titleStr,date,time,descStr,status,categoryStr);
+            //Toast.makeText(this, "saved", Toast.LENGTH_SHORT).show();
+            CustomeAlertDialog saved = new CustomeAlertDialog(EditTask.this,"Successful","task saved");
+            saved.btnOk.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
                     if(!response.isSuccessful())
@@ -309,6 +353,8 @@ public class EditTask extends AppCompatActivity {
                 public void onFailure(Call<JsonObject> call, Throwable t) {
                     CustomErrorAlertDialog errorConnecting = new CustomErrorAlertDialog(EditTask.this,"Error","there is a problem connecting to server");
 
+                public void onClick(View view) {
+                    finish();
                 }
             });
         }
