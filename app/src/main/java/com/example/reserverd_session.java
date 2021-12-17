@@ -103,11 +103,11 @@ public class reserverd_session extends AppCompatActivity {
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
                 if(!response.isSuccessful())
                 {
-                    CustomErrorAlertDialog getTasksDayError = new CustomErrorAlertDialog(reserverd_session.this,"Error","there is a problem with your internet connection");
+                    CustomeAlertDialog getTasksDayError = new CustomeAlertDialog(reserverd_session.this,"Error","there is a problem with your internet connection");
                 }
                 else{
                    // Toast.makeText(reserverd_session.this, Integer.toString(response.code()), Toast.LENGTH_SHORT).show();
-                    CustomSuccessAlertDialog getTasksDayError = new CustomSuccessAlertDialog(reserverd_session.this,"Successful","session canceled");
+                    CustomeAlertDialog getTasksDayError = new CustomeAlertDialog(reserverd_session.this,"Successful","session canceled");
                     getTasksDayError.btnOk.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -119,7 +119,7 @@ public class reserverd_session extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
-                CustomErrorAlertDialog getTasksDayError = new CustomErrorAlertDialog(reserverd_session.this,"Error","there is a problem with your internet connection");
+                CustomeAlertDialog getTasksDayError = new CustomeAlertDialog(reserverd_session.this,"Error","there is a problem with your internet connection");
             }
         });
     }

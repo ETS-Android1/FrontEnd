@@ -124,31 +124,31 @@ public class EditEventActivity extends AppCompatActivity {
         boolean valid = true;
         if(titleStr.equals(""))
         {
-            CustomErrorAlertDialog titleEmpyt = new CustomErrorAlertDialog(this,"Error","please fill the title field");
+            CustomeAlertDialog titleEmpyt = new CustomeAlertDialog(this,"Error","please fill the title field");
             titleSpace.setBackgroundResource(R.drawable.border_event_error);
             valid = false;
         }
         if(categoryStr.equals(""))
         {
-            CustomErrorAlertDialog categortyEmpyt = new CustomErrorAlertDialog(this,"Error","please fill the category field");
+            CustomeAlertDialog categortyEmpyt = new CustomeAlertDialog(this,"Error","please fill the category field");
             categorySpace.setBackgroundResource(R.drawable.border_event_error);
             valid = false;
         }
         if(locationStr.equals(""))
         {
-            CustomErrorAlertDialog locationEmpyt = new CustomErrorAlertDialog(this,"Error","please fill the location field");
+            CustomeAlertDialog locationEmpyt = new CustomeAlertDialog(this,"Error","please fill the location field");
             locationSpace.setBackgroundResource(R.drawable.border_event_error);
             valid = false;
         }
         if(privacyStr.equals(""))
         {
-            CustomErrorAlertDialog privacyEmpyt = new CustomErrorAlertDialog(this,"Error","please fill the privacy field");
+            CustomeAlertDialog privacyEmpyt = new CustomeAlertDialog(this,"Error","please fill the privacy field");
             privacySpace.setBackgroundResource(R.drawable.border_event_error);
             valid = false;
         }
         if(descriptionStr.equals(""))
         {
-            CustomErrorAlertDialog privacyEmpyt = new CustomErrorAlertDialog(this,"Error","please fill the descrption field");
+            CustomeAlertDialog privacyEmpyt = new CustomeAlertDialog(this,"Error","please fill the descrption field");
             descriptionSpace.setBackgroundResource(R.drawable.border_event_error);
             valid = false;
         }
@@ -187,13 +187,13 @@ public class EditEventActivity extends AppCompatActivity {
                 public void onResponse(Call<Event> call, Response<Event> response) {
                     if(!response.isSuccessful())
                     {
-                        CustomErrorAlertDialog errorConnecting = new CustomErrorAlertDialog(EditEventActivity.this,"Error","there is a problem connecting to server");
+                        CustomeAlertDialog errorConnecting = new CustomeAlertDialog(EditEventActivity.this,"error","there is a problem connecting to server");
                     }
                     else{
                         String code = Integer.toString(response.code());
                         Event addedEvent = response.body();
                   //      Toast.makeText(EditEventActivity.this, code, Toast.LENGTH_SHORT).show();
-                        CustomSuccessAlertDialog saved = new CustomSuccessAlertDialog(EditEventActivity.this,"Successful","event saved");
+                        CustomeAlertDialog saved = new CustomeAlertDialog(EditEventActivity.this,"Successful","event saved");
                         saved.btnOk.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
@@ -207,7 +207,7 @@ public class EditEventActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<Event> call, Throwable t) {
-                    CustomErrorAlertDialog errorConnecting = new CustomErrorAlertDialog(EditEventActivity.this,"Error","there is a problem connecting to server");
+                    CustomeAlertDialog errorConnecting = new CustomeAlertDialog(EditEventActivity.this,"Error","there is a problem connecting to server");
                 }
             });
         }
@@ -247,7 +247,7 @@ public class EditEventActivity extends AppCompatActivity {
             sessionsList.setAdapter(sessionAdap);
         }
         else{
-            CustomErrorAlertDialog errorDate = new CustomErrorAlertDialog(EditEventActivity.this,"Error","you can not select a date in past");
+            CustomeAlertDialog errorDate = new CustomeAlertDialog(EditEventActivity.this,"Error","you can not select a date in past");
         }
     }
 
@@ -288,7 +288,7 @@ public class EditEventActivity extends AppCompatActivity {
         {
             return true;
         }
-        CustomErrorAlertDialog dateAlert = new CustomErrorAlertDialog(this,"Error","you can't set a task for past");
+        CustomeAlertDialog dateAlert = new CustomeAlertDialog(this,"error","you can set a task for past");
         //Toast.makeText(this, "you can set a task for past", Toast.LENGTH_SHORT).show();
         return false;
 
