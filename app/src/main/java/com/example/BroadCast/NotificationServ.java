@@ -3,16 +3,21 @@ package com.example.BroadCast;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.Service;
+import android.app.TaskStackBuilder;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.os.IBinder;
 import android.text.format.Time;
 import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import com.example.DataBase.tasksDB;
+import com.example.MainActivity;
 import com.example.entity.Task;
 import com.example.myapplication.R;
 
@@ -73,6 +78,15 @@ public class NotificationServ extends Service {
             Log.e("notification_TAG","time"+task.getDateTime().toString());
             if(currentTimeStr.equals(task.getDateTime().toString()))
             {
+                // Create an Intent for the activity you want to start
+                Intent notificationIntent = new Intent(this, com.example.login.class);
+                TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+                stackBuilder.addNextIntentWithParentStack(notificationIntent);
+                notificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+                        | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+
+                PendingIntent Intent = PendingIntent.getActivity(this, 0,
+                        notificationIntent, 0);
                 Log.e("notification_TAG","in the notification");
                 NotificationManager notificationManager = (NotificationManager) getSystemService(Service.NOTIFICATION_SERVICE);
 
@@ -81,10 +95,27 @@ public class NotificationServ extends Service {
 
                 android.app.Notification notification;
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(NotificationServ.this);
-                builder.setContentTitle(task.getTitle().toString());
-                builder.setContentText("time for "+task.getTitle());
-                builder.setSmallIcon(R.drawable.logo_second);
-                builder.setChannelId(channelId);
+                String TimeTask = task.getDateTime().split("_")[1];
+                String hourStr = TimeTask.split(":")[0];
+                String minStr = TimeTask.split(":")[1];
+                int hour = Integer.parseInt(hourStr);
+                int min = Integer.parseInt(minStr);
+                if(hour>=5 && hour<= 10)
+                {
+                    builder.setContentTitle("Good morning .be careful about oversleeping");
+                    builder.setContentText("Wake up."+task.getCategory().toString()+" time has arrived.");
+                    builder.setSmallIcon(R.drawable.logo_second);
+                    builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.icon));
+                    builder.setChannelId(channelId);
+                }
+                else{
+                    builder.setContentTitle("the best time for a new beginning is right now");
+                    builder.setContentText(task.getCategory().toString()+" time has arrived.");
+                    builder.setSmallIcon(R.drawable.logo_second);
+                    builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.icon));
+                    builder.setChannelId(channelId);
+                }
+
 
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                     NotificationChannel notificationChannel = new NotificationChannel(channelId,channelName,NotificationManager.IMPORTANCE_HIGH);
@@ -95,7 +126,7 @@ public class NotificationServ extends Service {
                 notification = builder.build();
 
                 notificationManager.notify(1,notification);
-
+                builder.setContentIntent(Intent);
             }
         }
         return START_STICKY;
