@@ -158,7 +158,16 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_welcome.xml" value="0.1793478260869565" />
+        <entry key="..\:/p/FrontEnd/app/src/main/res/layout/activity_edit_event.xml" value="0.12360688956433637" />
+        <entry key="..\:/p/FrontEnd/app/src/main/res/layout/activity_join_event.xml" value="0.12360688956433637" />
+        <entry key="..\:/p/FrontEnd/app/src/main/res/layout/activity_join_private_event.xml" value="0.12360688956433637" />
+        <entry key="..\:/p/FrontEnd/app/src/main/res/layout/activity_my_sessions.xml" value="0.12360688956433637" />
+        <entry key="..\:/p/FrontEnd/app/src/main/res/layout/activity_reserverd_session.xml" value="0.12360688956433637" />
         <entry key="..\:/p/FrontEnd/app/src/main/res/layout/layout_navigation_header.xml" value="0.12001811594202899" />
+        <entry key="..\:/p/FrontEnd/app/src/main/res/layout/list_item.xml" value="0.12545289855072464" />
+        <entry key="..\:/p/FrontEnd/app/src/main/res/layout/recycler_view_item.xml" value="0.165625" />
+        <entry key="..\:/p/FrontEnd/app/src/main/res/layout/session_item.xml" value="0.12360688956433637" />
+        <entry key="..\:/p/FrontEnd/app/src/main/res/layout/session_members_layout.xml" value="0.264" />
         <entry key="..\:/p/FrontEnd/app/src/main/res/menu/navigation_menu.xml" value="0.1265625" />
         <entry key="..\:/project tahlil/FrontEnd/FrontEnd/app/src/main/res/drawable/border_editevent.xml" value="0.12037037037037036" />
         <entry key="..\:/project tahlil/FrontEnd/FrontEnd/app/src/main/res/drawable/border_event.xml" value="0.1638888888888889" />
@@ -173,7 +182,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
